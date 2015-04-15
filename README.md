@@ -1,7 +1,9 @@
 # sum-java-test
 Basic test to find 2-pairs matches when summed
 
-*Everything needed to run the code is in the main directory, the following commands should be run directly from there*
+*Everything needed to run the code is in the main directory, the following commands should be run directly from there.*
+
+*Assuming JDK is installed and ready so javac and java are both available.*
 
 ### Running the code
 
