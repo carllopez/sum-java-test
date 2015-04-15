@@ -1,9 +1,12 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Sum { 
     
-    public static void main(String[] args) { 
-
+    public static ArrayList<String> checkMatches() {
+        ArrayList<String> matches = new ArrayList<String>();
+        // numbers.add(5);
+        
         // Not using incoming array from arguments, hard-coding it here
         // and using plain loops instead of other approaches since it works
         // very fast for small (~500 items) arrays
@@ -20,13 +23,22 @@ public class Sum {
                             // Storing second sum result for easiness of comparison
                             sum2 = intsArray[k] + intsArray[n];
                             if (sum == sum2){
-                                System.out.println("Positions that match: " + i + ", " + j + ", " + k + ", " + n);
-                                System.out.println("Summing: " + intsArray[i] + " + " + intsArray[j] + " = " + intsArray[k] + " + " + intsArray[n] + " ==> " + sum);
+                                matches.add("Positions that match: " + i + ", " + j + ", " + k + ", " + n);
+                                // System.out.println("Positions that match: " + i + ", " + j + ", " + k + ", " + n);
+                                // System.out.println("Summing: " + intsArray[i] + " + " + intsArray[j] + " = " + intsArray[k] + " + " + intsArray[n] + " ==> " + sum);
                             }
                         }    
                     }
             }
         }
+
+        return(matches);
+     }
+
+    public static void main(String[] args) { 
+
+        for (String match : checkMatches())
+            System.out.println(match);
 
         // Possible immediate enhancements include not building strings with '+' inside the loops
         // but use a string builder and add those strings to a arraylist that gets printed in the end
